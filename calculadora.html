@@ -7,29 +7,53 @@
     <link rel="stylesheet" href="calculadora.css">
     <script src="calculate.js"></script>
 </head>
-<body>
-    <h1>CALCULADORA</h1>
-    <div class="calculator">
-        <input type="text"  id="display" readonly>
-        <button onclick="ClearDisplay()">C</button>
-        <!--Botão de limpar-->
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <!-- Botões com os números !-->
-        <button onclick="calculate('')">=</button>
-        <!--Botão para calcular (botão de igual)-->
-    </div>
+<body class="light">
+
+    <script src="https://kit.fontawesome.com/7880320b58.js" crossorigin="anonymous"></script> <!--Chama a biblioteca de icones, o sol e a lua no caso-->
+
+    <div class="corpoCalculadora">
+
+        <header>
+            <h1 class="titulo">CALCULADORA</h1>
+            
+            <div id="interruptor">
+                
+                <input  onclick="theme()" class="checkbox" id="checkbox" type="checkbox" >
+
+                <label class="label" for="checkbox">
+                    <i class="fas fa-sun"></i> <!--Icone do sol-->
+                    <i class="fas fa-moon"></i> <!--Icone da lua-->
+                    <div class="ball"></div> <!--bola que se move da direita para a esquerda-->
+                </label>
+
+            </div> 
+
+        </header>  
+
+        <div class="calculator">
+            
+            <input  type="text"  id="display" readonly>
+            <button id="clear" onclick="ClearDisplay()">C</button>
+            <!--Botão de limpar-->
+            <button class="botao" onclick="appendToDisplay('7')">7</button>
+            <button class="botao" onclick="appendToDisplay('8')">8</button>
+            <button class="botao" onclick="appendToDisplay('9')">9</button>
+            <button class="botao" onclick="appendToDisplay('4')">4</button>
+            <button class="botao" onclick="appendToDisplay('5')">5</button>
+            <button class="botao" onclick="appendToDisplay('6')">6</button>
+            <button class="botao" onclick="appendToDisplay('1')">1</button>
+            <button class="botao" onclick="appendToDisplay('2')">2</button>
+            <button class="botao" onclick="appendToDisplay('3')">3</button>
+            <button class="botao" onclick="appendToDisplay('0')">0</button>
+            <button class="botao" onclick="appendToDisplay('+')">+</button>
+            <button class="botao" onclick="appendToDisplay('*')">*</button>
+            <button class="botao" onclick="appendToDisplay('-')">-</button>
+            <button class="botao" onclick="appendToDisplay('/')">/</button>
+            <!-- Botões com os números !-->
+            <button class="botao" onclick="calculate('')">=</button>
+            <!--Botão para calcular (botão de igual)-->
+        </div>
+
+</div>
 </body>
 </html>

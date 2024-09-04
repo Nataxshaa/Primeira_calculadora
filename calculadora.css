@@ -1,29 +1,133 @@
-body{
-    background-color: black;
-    width: 300px;
-    height: 300px;
+*{
+    box-sizing: border-box; /*o código tava sem essa função antes, se nao me engano, ai coloquei para tirar a margem padra do navehador
+    */
 }
+body{
+  
+    margin: 0px;
+}
+.dark{
+    background-color: #292C35;
+    
+}
+.light{
+    background-color: white;
+    
+}
+.tLight{
+    color:white;
+}
+.tDark{
+    color:black;
+}
+
+.corpoCalculadora{
+    display: block;
+    margin: auto;
+    align-items: center;
+    width: 80%;
+   
+    padding: 20px;
+    margin-top: 8%;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    display:flex;
+    justify-content: space-between;
+}
+
 .calculator{
-    width: 300px;
-    margin: 50px auto;
+   
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 10px;
     
 }
 h1{
-    color: aliceblue;
+    color: black;
     font-family: sans-serif;
-    width: 10px;
-    height: 10px;
-    text-align: center;
-    margin: 50px auto;
+   
+     margin-left:10px ;
+     
+     font-size: 37px;
 }
 button{
     padding: 20px;
     font-size: 20px;;
+    background-color: #414141;
+    color: white;
 }
 
 #display{
-    width: 300px;
+    width: 100%;
+    background-color: #ddd;
 }
+
+#clear{
+    background-color: red;
+}
+
+.botao:hover{
+    background-color: #999;
+}
+#clear:hover{
+    background-color: rgb(201, 0, 0)
+}
+
+.label{
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+}
+
+.fa-moon{
+    color:rgb(192, 192, 9)
+}
+.fa-sun{
+    color:#f39c12
+}
+.ball{
+    width:22px;
+    height:22px;
+    background-color: #333;
+    top:2px;
+    left:2px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.2s linear;
+}
+.checkbox{
+    opacity:0;;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball{
+   transform:translateX(24px) ;
+}
+#interruptor{
+    margin-top: 32px;
+}
+
+/*.botao{
+
+}
+*/
+
+.bDark{
+    background-color: white;
+    color:black;
+}
+.bLight{
+    background-color:#414141 ;
+    color:white;
+}
+
